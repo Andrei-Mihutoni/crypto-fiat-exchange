@@ -82,17 +82,14 @@ function getRates(fiatData) {
 
     const rates = fiatData.rates;
     // console.log(rates)
-
 }
 
 
 function conversion1(fiatData) {
 
     // input2.value = input1.value * 5;
-    // console.log(select1.value)
+    console.log(select1.value)
     // input1.value = input2.value;
-
-
 }
 
 function conversion2() {
