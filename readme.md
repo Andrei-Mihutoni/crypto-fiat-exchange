@@ -17,3 +17,5 @@ Additional features and suggestions that didn't make it into the code can be exp
 For fiat currencies use this api: https://exchangeratesapi.io/.
 
 For crypto-currencies use this api: https://api.binance.com/api/v3/ticker/price (documentation here: https://github.com/binance-exchange/binance-official-api-docs/blob/master/rest-api.md#symbol-price-ticker)
+
+https://api.binance.com/api/v3/exchangeInfo

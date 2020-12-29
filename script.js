@@ -2,6 +2,11 @@
 
 
 const USDbaseFiatURL = "https://api.exchangeratesapi.io/latest?base=USD"
+const cryptoBaseURL = " https://api.binance.com"
+
+let query = "/api/v3/ticker/price"
+let cryptoURL = cryptoBaseURL + query;
+console.log(cryptoURL)
 
 
 init()
@@ -22,14 +27,28 @@ function init() {
 }
 
 
-function getFiat(USDbaseFiatURL, callback) {
-    fetch(USDbaseFiatURL)
+async function getFiat(USDbaseFiatURL, callback) {
+    await fetch(USDbaseFiatURL)
         .then((response) => response.json())
         .then((fiatData) => {
             // when loaded, prepare objects
             callback(fiatData);
         });
 }
+
+
+// Promise.all([
+//     fetch(url1).then(value => value.json()),
+//     fetch(url2).then(value => value.json())
+//     ])
+//     .then((value) => {
+//        console.log(value)
+//       //json response
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     });
+
 
 
 
@@ -64,7 +83,5 @@ function conversion(i, j) {
     fiatInput[i].value = fiatInput[j].value * rates[fiatSelect[i].value] / rates[fiatSelect[j].value];
     fiatInput[i].value = parseFloat(fiatInput[i].value).toFixed(2); //restraining the number of decimals 
 }
-
-
 
 
