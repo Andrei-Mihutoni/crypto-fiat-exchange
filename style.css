@@ -14,7 +14,8 @@ select {
 }
 
 .fiat-wrapper,
-.crypto-wrapper {
+.crypto-wrapper,
+.coinbase-wrapper {
   margin: 100px;
 }
 
