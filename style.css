@@ -12,3 +12,12 @@ select {
 .wrapper {
   margin: 10px;
 }
+
+.fiat-wrapper,
+.crypto-wrapper {
+  margin: 100px;
+}
+
+.equal {
+  margin-left: 100px;
+}

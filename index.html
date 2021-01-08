@@ -4,35 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Currency convertor. It converts FIAT and crypto currencies.">
     <title>Opeepl Exchange</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 
 
+<div class="fiat-wrapper">
+    <h3>Fiat convertor</h3>
+    <div class="input-wrapper wrapper">
+        <input id="input1" class="fiat-input" aria-label="Currency Amount Field" type="number">
+        <select id="select1" class="fiat-currencies-symbol" name="input-currency">
+            <option selected value="">Select currency</option>
+            <!-- <option value="currency-symbol">curenency symbol</option> -->
+        </select>
+    </div>
 
-<div class="input-wrapper wrapper">
-    <input id="input1" class="fiat-input" aria-label="Currency Amount Field" type="number">
-    <select id="select1" class="currencies-symbol" name="input-currency">
-        <option selected value="">Select currency</option>
-        <!-- <option value="currency-symbol">curenency symbol</option> -->
-    </select>
+    <p class="equal">=</p>
+
+    <div class="output-wrapper wrapper">
+        <input id="input2" class="fiat-input" aria-label="Currency Amount Field" type="number">
+        <select id="select2" class="fiat-currencies-symbol" name="input-currency">
+            <option selected value="">Select currency</option>
+        </select>
+    </div>
+
 </div>
 
-<p>=</p>
 
-<div class="output-wrapper wrapper">
-    <input id="input2" class="fiat-input" aria-label="Currency Amount Field" type="number">
-    <select id="select2" class="currencies-symbol" name="input-currency">
-        <option selected value="">Select currency</option>
-        <option value="currency-symbol">curenency symbol</option>
 
-    </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="crypto-wrapper">
+    <h3>Crypto convertor</h3>
+    <div class="input-wrapper wrapper">
+        <input id="input1" class="crypto-input" aria-label="Fiat Currency Amount Field" type="tel">
+        <select id="select1" class="crypto-currencies-symbol" name="input-currency">
+            <option selected value="">Select crypto</option>
+            <!-- <option value="currency-symbol">curenency symbol</option> -->
+        </select>
+    </div>
+
+    <p class="equal">=</p>
+
+    <div class="output-wrapper wrapper">
+        <input id="input2" class="crypto-input" aria-label="Crypto Currency Amount Field" type="tel">
+        <select id="select2" class="crypto-currencies-symbol" name="input-currency">
+            <option selected value="">Select crypto</option>
+        </select>
+    </div>
+
 </div>
-
-
-
-
 
 
 <!-- 
