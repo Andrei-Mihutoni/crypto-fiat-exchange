@@ -17,7 +17,7 @@ const coinbaseUSDURL = "https://api.coinbase.com/v2/exchange-rates?currency=USD"
 
 
 
-// declaring the input/select variables
+// declaring the variables
 
 // Coinbase fiat/crypto convertor 
 const input = document.querySelectorAll(".input");
@@ -166,9 +166,6 @@ function inputListeners() {
     fiatSelect[1].addEventListener("change", () => fiatConversion(1, 0));
 
 
-
-
-
     //       *** Binance crypto/crypto convertor ***
     cryptoInput[0].addEventListener("keyup", () => binanceConversion())
     cryptoSelect[0].addEventListener("change", () => binanceConversion());
@@ -180,7 +177,7 @@ function inputListeners() {
 
 function coinbaseConversion(k, l) {
     input[k].value = input[l].value * ratesCoinbase[select[k].value] / ratesCoinbase[select[l].value];
-    input[k].value = parseFloat(input[k].value).toFixed(5); //restraining the number of decimals 
+    input[k].value = parseFloat(input[k].value).toFixed(4); //restraining the number of decimals 
 };
 
 
@@ -202,11 +199,10 @@ function binanceConversion() {
         if (selectedParity0 == elem.symbol) {
             console.log(selectedParity0)
             cryptoInput[1].value = cryptoInput[0].value * elem.price; // if there is a match, multiply the input value with the rate.
-            cryptoInput[1].value = parseFloat(cryptoInput[1].value).toFixed(5); //restraining the number of decimals.
+            cryptoInput[1].value = parseFloat(cryptoInput[1].value).toFixed(4); //restraining the number of decimals.
         } else if (selectedParity1 == elem.symbol) {
             cryptoInput[1].value = cryptoInput[0].value * (1 / elem.price);
-            cryptoInput[1].value = parseFloat(cryptoInput[1].value).toFixed(5); //restraining the number of decimals.
-            console.log(elem.price)
+            cryptoInput[1].value = parseFloat(cryptoInput[1].value).toFixed(4); //restraining the number of decimals.
         } else if (selectedParity0 == selectedParity1) {
             cryptoInput[1].value = cryptoInput[0].value;
         }

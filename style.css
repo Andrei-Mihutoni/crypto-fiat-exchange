@@ -3,6 +3,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -13,19 +15,20 @@ input[type="number"]::-webkit-outer-spin-button {
 input,
 select {
   padding: 8px;
-  border: 1px solid grey;
+  border: 1px solid lightgray;
   border-radius: 5px;
 }
 
 .fiat-wrapper,
 .crypto-wrapper,
 .coinbase-wrapper {
-  margin-top: 40px;
-  margin-bottom: 50px;
-  margin-left: 50px;
-  border: 1px solid lightgray;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1.5px solid lightgray;
   border-radius: 10px;
-  width: 350px;
+  width: 330px;
   padding: 1.5em;
 }
 
@@ -38,10 +41,16 @@ select {
   font-size: 0.7em;
   margin-bottom: 1.2em;
 }
+.data-from a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 600;
+}
 
 h3 {
   margin-top: 0.2em;
   margin-bottom: 0em;
+  opacity: 60%;
 }
 
 p {

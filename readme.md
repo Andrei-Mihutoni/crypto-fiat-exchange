@@ -1,21 +1,13 @@
-Introduction
-We would like you to implement a small exchange-rate website.
+This is my answer to the exchange-rate website.
 
-It should be possible to enter a price in one currency and get it converted into the selected currency.
+The fiat-to-fiat converter and is 100% functional
+The crypto converter with the data provided by Binance is 90% functional. There are some cryptocurrencies that are not converted.
+I could not find on binance api, a parity between crypto and fiat.
+I seen there is USDT (Tether), a crypto coin that mirrors the price of US dollar. Without any deep financial knowledge, and without all crypto currencies prices in Binance data, I searched for other, more direct, data source, for crypto/fiat/crypto conversion.
 
-The focus should be on writing good and maintainable code. The UI should be usable, but is not the main focus.
+Therefore I chose to use the data from the Coinbase API (the same used by Google exchange): https://api.coinbase.com/v2/exchange-rates?currency=USD
 
-Requirements
-It should both support fiat currencies as well as crypto-currencies.
-It should be possible to exchange between any fiat and any crypto-currency as well.
-The api calls should be cached whenever possible.
-It should be easy to add additional apis in the future.
-It should preferably use Vue.js.
-Details
-Additional features and suggestions that didn't make it into the code can be explained and put in a txt file.
+I found it to be more easy to work with, well formated JSON and multiple options suitable for a small exchage app (e.g: chosing a base currency for all rates).
 
-For fiat currencies use this api: https://exchangeratesapi.io/.
-
-For crypto-currencies use this api: https://api.binance.com/api/v3/ticker/price (documentation here: https://github.com/binance-exchange/binance-official-api-docs/blob/master/rest-api.md#symbol-price-ticker)
-
-https://api.binance.com/api/v3/exchangeInfo
+Coinbase exchage rate API documentation:
+https://developers.coinbase.com/api/v2#get-exchange-rates
