@@ -17,6 +17,7 @@ select {
   padding: 8px;
   border: 1px solid lightgray;
   border-radius: 5px;
+  text-align-last: center;
 }
 
 .fiat-wrapper,
