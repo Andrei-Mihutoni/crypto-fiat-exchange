@@ -58,7 +58,7 @@ function init() {
 function fetchData() {
     Promise.all([
         fetch(coinbaseUSDURL),
-        fetch(USDbaseFiatURL),
+        //fetch(USDbaseFiatURL),
         fetch(binanceCryptoURL),
         fetch(cryptoSymbolsURL)
     ]).then(function (responses) {
